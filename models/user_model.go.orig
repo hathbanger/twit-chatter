@@ -69,6 +69,8 @@ func FindUser(username string) (User, error) {
 
 	return user, err
 }
+<<<<<<< HEAD
+=======
 
 
 func GetAllUsers() ([]*User, error){
@@ -90,3 +92,4 @@ func GetAllUsers() ([]*User, error){
 
 	return users, err
 }
+>>>>>>> 19f500b8e7051eea109fffe44c3d2c3e08d4b965
