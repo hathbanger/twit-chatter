@@ -39,7 +39,7 @@ func Run() {
 	e.POST("/getroom", GetRoom)
 	e.POST("/joinroom", JoinRoom)
 
-	e.GET("/ws", standard.WrapHandler(hello()))
+	e.GET("/ws", standard.WrapHandler(twitChatter()))
 
 
 	fmt.Println("Server now running on port: 1323")
