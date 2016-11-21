@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"log"
 	"flag"
-	// "fmt"
-	// "log"
 	"os"
 	"os/signal"
 	"syscall"
@@ -29,7 +27,6 @@ type ClientConn struct {
 }
 
 func twitChatter() websocket.Handler {
-
 	var clientMessage string
 	return websocket.Handler(func(ws *websocket.Conn) {
 	flags := flag.NewFlagSet("user-auth", flag.ExitOnError)
