@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/go-chatter/server"
+	"github.com/twit-chatter-go/server"
 )
 
 func main() {
