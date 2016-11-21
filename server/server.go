@@ -11,10 +11,10 @@ import (
 
 
 func Run() {
+// ECHO
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
-
 
 // CORS
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
@@ -23,13 +23,9 @@ func Run() {
 	}))
 
 // ROUTES
-	e.GET("/", accessible)
-	r.GET("", restricted)
-
 	e.GET("/ws", standard.WrapHandler(twitChatter()))
-
-
 	fmt.Println("Server now running on port: 1323")
 	e.Run(standard.New(":1323"))
+
 }
 
