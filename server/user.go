@@ -9,6 +9,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 )
 
+
 func CreateUser(c echo.Context) error {
 	username := c.FormValue("username")
 	password := c.FormValue("password")
@@ -21,6 +22,7 @@ func CreateUser(c echo.Context) error {
 
 	return c.JSON(http.StatusOK, user)
 }
+
 
 func GetUser(c echo.Context) error {
 	username := c.Param("username")

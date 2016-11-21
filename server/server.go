@@ -3,7 +3,6 @@ package server
 import (
 	"fmt"
 
-
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/labstack/echo/engine/standard"
@@ -35,6 +34,10 @@ func Run() {
 	e.POST("/user", CreateUser)
 	e.GET("/users", GetAllUsers)
 	e.POST("/login", Login)
+	e.POST("/message", CreateMessage)
+	e.POST("/room", CreateRoom)
+	e.POST("/getroom", GetRoom)
+	e.POST("/joinroom", JoinRoom)
 
 	e.GET("/ws", standard.WrapHandler(hello()))
 

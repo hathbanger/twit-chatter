@@ -8,6 +8,7 @@ import (
 	"github.com/go-chatter/store"
 )
 
+
 type User struct {
 	//BaseModel
 	Id 		bson.ObjectId          `json:"id",bson:"_id,omitempty"`
@@ -24,6 +25,7 @@ func NewUser(username string, password string) *User {
 
 	return u
 }
+
 
 func (u *User) Save() error {
 	session, err := store.ConnectToDb()
